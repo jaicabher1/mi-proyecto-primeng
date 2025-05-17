@@ -1,0 +1,16 @@
+<!-- Barra superior -->
+<div class="barra-superior">
+  <a routerLink="/home" class="logo-sistema">
+    Logo
+  </a>
+
+  <div class="usuario-info">
+    <i class="pi pi-user"></i>
+    @if (usuario) {
+      <a routerLink="/perfil">{{ usuario.nombre }}</a>
+    } @else {
+      <a routerLink="/login">Iniciar sesión</a>
+    }
+  </div>
+</div>
+<p-menubar [model]="items"></p-menubar>

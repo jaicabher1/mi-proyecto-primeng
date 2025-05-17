@@ -1,0 +1,57 @@
+<!-- Encabezado -->
+<div class="encabezado-cursos">
+    <h2 class="titulo-cursos">Cursos</h2>
+    <div class="separador-vertical"></div>
+    <button pButton pRipple severity="primary" class="button-course">
+        <span class="plus">+</span>
+        <span pButtonLabel class="create-button">Create</span>
+    </button>
+</div>
+
+<!-- Filtros -->
+<div class="filtros-container">
+    <!-- Buscar por nombre -->
+    <p-iconfield class="icon-busqueda">
+        <input type="text" pInputText placeholder="Buscar" class="input-search" [(ngModel)]="busquedaTexto" />
+        <p-inputicon styleClass="pi pi-search" />
+    </p-iconfield>
+
+    <!-- Filtro por materia (aún no vinculado a cursos) -->
+    <p-multiSelect [options]="materias" [(ngModel)]="materiasSeleccionadas" optionLabel="name" placeholder="Materia"
+        display="chip" styleClass="dropdown-filtro"></p-multiSelect>
+
+    <!-- Filtro por duración total -->
+    <p-multiSelect [options]="duracion" [(ngModel)]="duracionSeleccionadas" optionLabel="horas" optionValue="horas"
+        placeholder="Duración" display="chip" styleClass="dropdown-filtro"></p-multiSelect>
+</div>
+
+<!-- Tabla de cursos -->
+<p-table [value]="cursosFiltrados" [paginator]="true" [rows]="10" [tableStyle]="{ 'min-width': '100%' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nombre</th>
+            <th>Estado</th>
+            <th>Docente</th>
+            <th>Horas lectivas</th>
+            <th>Horas tutoría</th>
+            <th>Horas totales</th>
+            <th>Última modificación</th>
+        </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-curso>
+        <tr>
+            <td>{{ curso.nombre }}</td>
+            <td>
+                <span [ngClass]="estadoClass(curso.estado)">
+                    {{ curso.estado }}
+                </span>
+            </td>
+            <td>{{ curso.docente }}</td>
+            <td>{{ curso.horasLectivas }}</td>
+            <td>{{ curso.horasTutoria }}</td>
+            <td>{{ curso.horasTotales }}</td>
+            <td>{{ curso.fechaModificacion }}</td>
+        </tr>
+    </ng-template>
+</p-table>

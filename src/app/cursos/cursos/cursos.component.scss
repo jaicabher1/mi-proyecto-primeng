@@ -1,0 +1,118 @@
+.encabezado-cursos {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.75rem 1.5rem;
+}
+
+.titulo-cursos {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e2b3c;
+  margin: 0;
+}
+
+.separador-vertical {
+  width: 1px;
+  height: 30px;
+  background-color: #dcdcdc;
+}
+
+.button-course {
+  background-color: #94D900 !important;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.plus {
+  font-size: 1.2rem; // antes 2.5rem
+  color: #fff;
+  margin-right: 0.4rem;
+}
+
+.create-button {
+  font-size: 0.95rem; // antes 1.2rem
+  color: #fff;
+}
+
+.filtros-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.dropdown-filtro {
+  width: 200px;
+
+  .p-multiselect {
+    border-radius: 6px;
+    border: 1px solid #cdd5df;
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .p-multiselect-label {
+    color: #1e2b3c;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .p-multiselect-trigger {
+    color: #1e2b3c;
+  }
+}
+
+.input-search {
+  width: 200px;
+  border-radius: 6px;
+  font-size: 1rem;
+  padding: 0.45rem 0.5rem;
+  border: 1px solid #cdd5df;
+}
+
+.icon-busqueda {
+  .p-inputtext {
+    border-radius: 6px;
+    border: 1px solid #cdd5df;
+    font-size: 1rem;
+    color: #6c757d;
+    padding: 0.45rem 0.75rem;
+    width: 200px;
+  }
+
+  .pi {
+    color: #6c757d; // mismo tono que las flechas del dropdown
+    font-size: 1rem;
+  }
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+.badge-blue {
+  background-color: #2ea3f2;
+}
+
+.badge-orange {
+  background-color: #f57c00;
+}
+
+.badge-yellow {
+  background-color: #fbc02d;}
+
+.badge-green {
+  background-color: #43a047;
+}
