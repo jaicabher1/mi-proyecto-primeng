@@ -1,4 +1,7 @@
-<app-menu-lateral />
-<app-cursos></app-cursos>
-
+@if(isLoggedIn) {
+    <app-menu-lateral />
+    <app-cursos></app-cursos>
+} @else {
+    <app-login></app-login>
+}
 <router-outlet></router-outlet>
