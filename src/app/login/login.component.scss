@@ -1,0 +1,142 @@
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f7fcee, #e5f0d2);
+  padding: 1.5rem;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 2.5rem 2.25rem 2rem 2.25rem;
+  box-shadow: 0 6px 24px 0 rgba(0,0,0,0.09);
+  max-width: 410px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #337340;
+  margin-bottom: 0.25rem;
+}
+
+.login-subtitle {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-bottom: 1.2rem;
+}
+
+/* Input general para email y password */
+.login-input {
+  width: 100%;
+  padding: 0.65rem 2.5rem 0.65rem 0.95rem;
+  font-size: 1rem;
+  border: 1.5px solid #cdd5df;
+  border-radius: 8px;
+  background: #f7fbff;
+  color: #1e2b3c;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+.login-input:focus {
+  border-color: #94d900;
+  outline: none;
+}
+
+/* Iconos */
+.login-iconfield {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.login-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #cdd5df;
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+.p-password {
+  width: 100%;
+}
+.p-password-input,
+.login-input-pw .p-inputtext {
+  /* Hereda el mismo estilo que login-input */
+  width: 100%;
+  padding: 0.65rem 2.5rem 0.65rem 0.95rem;
+  font-size: 1rem;
+  border: 1.5px solid #cdd5df;
+  border-radius: 8px;
+  background: #f7fbff;
+  color: #1e2b3c;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+.p-password-input:focus {
+  border-color: #94d900;
+  outline: none;
+}
+.p-password-icon {
+  color: #94d900 !important;
+  right: 1rem;
+}
+
+/* Opciones */
+.login-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0 0.5rem 0;
+}
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.remember-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e2b3c;
+  margin-left: 0.4rem;
+  cursor: pointer;
+}
+.reset-password {
+  font-size: 1rem;
+  color: #2ea3f2;
+  font-weight: 500;
+  text-decoration: none;
+  transition: text-decoration 0.2s, color 0.2s;
+}
+.reset-password:hover {
+  text-decoration: underline;
+  color: #1e2b3c;
+}
+
+/* Botón */
+.login-btn .p-button {
+  width: 100%;
+  background: #19bc71;
+  border: none;
+  font-size: 1.09rem;
+  padding: 0.85rem 0;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(148, 217, 0, 0.09);
+  transition: background 0.2s;
+}
+.login-btn .p-button:hover {
+  background: #14965a;
+}
+.login-error {
+  color: #e74c3c;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}

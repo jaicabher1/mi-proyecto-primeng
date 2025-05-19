@@ -1,0 +1,37 @@
+<div class="login-container">
+    <div class="login-card">
+        @if(errorMsg){
+        <div class="login-error">
+            {{ errorMsg }}
+        </div>
+        }
+        <h2 class="login-title">Log in</h2>
+        <p class="login-subtitle">Please enter your details</p>
+
+        <!-- Email Input -->
+        <p-iconfield class="login-iconfield">
+            <input type="email" pInputText placeholder="Email" [(ngModel)]="email" class="login-input" />
+            <i class="pi pi-envelope login-icon"></i>
+        </p-iconfield>
+
+        <!-- Password Input -->
+        <div class="login-input-pw">
+            <p-password [(ngModel)]="password" placeholder="Password" [toggleMask]="true" [feedback]="false"
+                inputStyleClass="login-input">
+                <ng-template pTemplate="header"></ng-template>
+                <ng-template pTemplate="footer"></ng-template>
+            </p-password>
+        </div>
+
+        <!-- Options -->
+        <div class="login-options">
+            <div class="remember">
+                <p-checkbox binary [(ngModel)]="checked" inputId="rememberMe"></p-checkbox>
+                <label for="rememberMe" class="remember-label">Remember Me</label>
+            </div>
+            <a class="reset-password" href="#">Reset password</a>
+        </div>
+
+        <p-button label="Log In" class="login-btn" [style]="{ width: '100%' }" (onClick)="login()"></p-button>
+    </div>
+</div>
